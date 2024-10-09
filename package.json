@@ -1,6 +1,6 @@
 {
   "name": "trymore-astro-template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TryMore.inc Astro Template",
   "type": "module",
   "scripts": {
@@ -13,8 +13,8 @@
     "build:format": "node ./src/integrations/beautifyHTML.js",
     "preview": "astro preview",
     "lint": "npm-run-all -s lint:*",
-    "lint:html": "markuplint \"src/**/*.html\"",
-    "lint:css": "stylelint \"src/**/*.css\"",
+    "lint:html": "markuplint \"htdocs/**/*.html\"",
+    "lint:css": "stylelint \"htdocs/**/*.css\"",
     "lint:js": "eslint \"src/**/*.js\"",
     "format": "html-beautify \"htdocs/**/*.html\""
   },
