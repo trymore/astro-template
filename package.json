@@ -24,7 +24,7 @@
   },
   "auther": "TryMore.inc",
   "dependencies": {
-    "astro": "^4.14.2"
+    "astro": "^5.1.10"
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",
