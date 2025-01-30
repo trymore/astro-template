@@ -9,15 +9,15 @@ interface Page {
   getStaticPaths?: () => Promise<StaticPathParams[]>;
 }
 
-const allPages = await Astro.glob('/src/pages/**/*.astro');
-let pathList = [];
-
 const changeExtension = (filename: string): string => filename.replace(/\.astro$/, '.html');
 
 const extractPath = (fullPath: string): string => {
   const path = fullPath.split('/src/pages/')[1];
   return changeExtension(path);
 };
+
+const allPages = await Astro.glob('/src/pages/**/*.astro');
+let pathList = [];
 
 const generateUrl = async (page: Page) => {
   let baseUrl = page.url || '/';
@@ -40,9 +40,9 @@ const generateUrl = async (page: Page) => {
     });
   } else {
     const staticPath = extractPath(page.file);
-    const staticUrl = staticPath === 'index.html' ? '/' : `${baseUrl}/`;
-    const staticLabel = staticPath
-    pathList.push({ ...page, url: staticUrl, label: staticLabel });
+    const staticUrl = staticPath === 'index.html' ? '/' : `/${staticPath}`;
+    const staticLabel = staticPath;
+    pathList.push({ ...page, url: staticUrl, label: staticLabel});
   }
 };
 
