@@ -4,9 +4,10 @@
   "description": "TryMore.inc Astro Template",
   "type": "module",
   "scripts": {
-    "dev": "npm-run-all -p dev:*",
+    "dev": "npm run dev:astro & npm run dev:optimizeImage",
     "dev:astro": "astro dev",
     "dev:optimizeImage": "node ./src/integrations/optimizeImage.js",
+    "dev:coding": "IGNORE_SCRIPTS=true astro dev",
     "build": "npm-run-all -s build:*",
     "build:astro": "astro build",
     "build:relativePath": "node ./src/integrations/convertRelativePath.js",
