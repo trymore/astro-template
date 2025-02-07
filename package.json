@@ -1,6 +1,6 @@
 {
   "name": "trymore-astro-template",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "TryMore.inc Astro Template",
   "type": "module",
   "scripts": {
