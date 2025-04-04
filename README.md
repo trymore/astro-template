@@ -76,9 +76,11 @@ npm install
 | config.build.relativePath         | ビルド出力 相対パスの設定                       |
 | config.build.css.path             | ビルド出力 CSSファイルのディレクトリ設定        |
 | config.build.css.minify           | ビルド出力 CSSファイルのMinify設定              |
+| config.build.css.queryParameter   | ビルド出力 CSSファイルのクエリパラメータ設定    |
 | config.build.js.path              | ビルド出力 JavaScriptファイルのディレクトリ設定 |
 | config.build.js.minify            | ビルド出力 JavaScriptファイルのMinify設定       |
 | config.build.minify               | ビルド出力 Minify設定                           |
+| config.build.js.queryParameter    | ビルド出力 JSファイルのクエリパラメータ設定     |
 
 
 ## 👀 公式ドキュメント
