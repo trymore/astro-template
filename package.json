@@ -1,13 +1,13 @@
 {
   "name": "trymore-astro-template",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "TryMore.inc Astro Template",
   "type": "module",
   "scripts": {
-    "dev": "npm run dev:astro & npm run dev:optimizeImage",
+    "dev": "npm run dev:astro & npm run dev:optimize-image",
     "dev:astro": "astro dev",
-    "dev:optimizeImage": "node ./src/integrations/optimizeImage.js",
-    "dev:coding": "IGNORE_SCRIPTS=true astro dev",
+    "dev:optimize-image": "node ./src/integrations/optimizeImage.js",
+    "dev:coding": "IGNORE_SCRIPTS=true npm run dev:astro & npm run dev:optimize-image",
     "build": "npm-run-all -s build:*",
     "build:astro": "astro build",
     "build:convert-relative-path": "node ./src/integrations/convertRelativePath.js",
