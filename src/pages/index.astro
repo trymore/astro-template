@@ -1,10 +1,10 @@
 ---
-import Layout from '@/layouts/Layout.astro'
+import Layout from "@/layouts/Layout.astro";
 
-const title       = 'Home'
-const description = 'Homeディスクリプション'
-const bodyClass   = 'page-home'
+const pageTitle       = ["タイトル", "ogタイトル"];
+const pageDescription = ["ディスクリプション", "ogディスクリプション"];
+const pageBodyClass   = "page-home";
 ---
-<Layout title={title} description={description} bodyClass={bodyClass}>
+<Layout pageTitle={pageTitle} pageDescription={pageDescription} pageBodyClass={pageBodyClass}>
   <h1>TryMore Astro Template 🚀</h1>
 </Layout>
