@@ -3,7 +3,8 @@ import imageSize from 'image-size';
 
 const getImageSizes = (imagePath) => {
   if (fs.existsSync(imagePath)) {
-    return imageSize(imagePath);
+    const imageBuffer = fs.readFileSync(imagePath);
+    return imageSize(imageBuffer);
   }
   return { width: 0, height: 0 };
 };
