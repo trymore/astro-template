@@ -2,12 +2,12 @@
 export const siteUrl = 'https://example.com/'
 
 // SEO, OGP
-export const siteTitle       = ['タイトル', 'ogタグ用タイトル'];
-export const siteDescription = ['ディスクリプション', 'ogディスクリプション'];
-export const siteOgSiteName  = 'サイト名'
-export const siteOgUrl       = siteUrl
-export const siteOgImage     = 'https://example.com/assets/img/og/og-img.jpg'
-export const siteOgType      = 'website'
+export const defaultTitle       = ['タイトル', 'ogタイトル'];
+export const defaultDescription = ['ディスクリプション', 'ogディスクリプション'];
+export const defaultOgSiteName  = 'サイト名'
+export const defaultOgUrl       = siteUrl
+export const defaultOgImage     = 'https://example.com/assets/img/og/og-img.jpg'
+export const defaultOgType      = 'website'
 
 // Path
 export const pathImg = '/assets/img/'

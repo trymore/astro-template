@@ -9,6 +9,10 @@ interface Page {
   getStaticPaths?: () => Promise<StaticPathParams[]>;
 }
 
+const pageModules = import.meta.glob<Page>('/src/pages/**/*.astro', { eager: true });
+const allPages = Object.entries(pageModules).map(([file, mod]) => ({ file, ...mod }));
+let pathList = [];
+
 const changeExtension = (filename: string): string => filename.replace(/\.astro$/, '.html');
 
 const extractPath = (fullPath: string): string => {
@@ -16,18 +20,15 @@ const extractPath = (fullPath: string): string => {
   return changeExtension(path);
 };
 
-const allPages = await Astro.glob('/src/pages/**/*.astro');
-let pathList = [];
-
 const generateUrl = async (page: Page) => {
   let baseUrl = page.url || '/';
 
   if (page.getStaticPaths) {
     const paths = await page.getStaticPaths();
 
-    paths.forEach((path: StaticPathParams) => {
+    paths.forEach((path) => {
       const dynamicSegmentMatch = page.file.match(/\[\.\.\.(.+?)\]\.astro$/);
-      
+
       if (dynamicSegmentMatch) {
         const dynamicSegment = dynamicSegmentMatch[1];
         const dynamicPath = `${path.params[dynamicSegment]}/`;
@@ -41,8 +42,7 @@ const generateUrl = async (page: Page) => {
   } else {
     const staticPath = extractPath(page.file);
     const staticUrl = staticPath === 'index.html' ? '/' : `/${staticPath}`;
-    const staticLabel = staticPath;
-    pathList.push({ ...page, url: staticUrl, label: staticLabel});
+    pathList.push({ ...page, url: staticUrl, label: staticPath });
   }
 };
 
