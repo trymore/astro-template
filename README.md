@@ -30,7 +30,7 @@ npm install
 | `npm run lint`         | ソースコードの静的検証                                         |
 | `npm run lint:html`    | HTML構文をチェック                                             |
 | `npm run lint:css`     | CSS構文をチェック                                              |
-| `npm run lint:js`      | JavaScript構文をチェック                                       |
+| `npm run lint:js`      | JavaScript・TypeScript構文をチェック                           |
 
 ## 📁 ディレクトリ構成
 ```
@@ -85,3 +85,4 @@ npm install
 ## 👀 公式ドキュメント
 - [Astro](https://docs.astro.build/ja/getting-started/)
 - [Stylus](https://stylus-lang.com/docs/)
+- [PostCSS](https://postcss.org/docs/)
