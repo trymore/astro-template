@@ -1,20 +1,20 @@
-module.exports = {
+export default {
   extends: ['markuplint:recommended'],
   rules: {
-    "['required-attr']": true
+    'required-attr': true
   },
   nodeRules: [
     {
       selector: 'script',
       rules: {
-        "required-attr": false
+        'required-attr': false
       }
     },
     {
-      selector: ".svg-sprites",
+      selector: '.svg-sprites',
       rules: {
-        "ineffective-attr": false
+        'ineffective-attr': false
       }
     }
-  ],
+  ]
 };

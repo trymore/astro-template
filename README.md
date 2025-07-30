@@ -2,15 +2,14 @@
 TryMore Astro Template は、[Astro](https://astro.build/) を使用して静的な Web サイトを制作するためのスターターテンプレートです。
 
 ## 🛠️ 使用ツール
-###  開発フレームワーク & CSS
+###  フロントエンド
 - [Astro](https://astro.build/) - フレームワーク
 - [Stylus](https://stylus-lang.com/) - CSS プリプロセッサー
-- [Autoprefixer](https://github.com/postcss/autoprefixer) - CSS ポストプロセッサー
-### コード解析 & コードフォーマッター
+- [PostCSS](https://postcss.org/) - CSS ポストプロセッサー
+### コード解析
 - [Markuplint](https://markuplint.dev/) - HTML 静的コード解析用ツール
 - [Stylelint](https://stylelint.io/) - CSS 静的コード解析用ツール
-- [ESLint](https://eslint.org/) - JavaScript コード解析用ツール
-- [js-beautify](https://beautifier.io/) - HTML フォーマッター
+- [ESLint](https://eslint.org/) - JavaScript・TypeScript コード解析用ツール
 
 ## 🧑‍🚀 必須環境
 [Node.js](https://nodejs.jp/) >= `v18.17.0`  

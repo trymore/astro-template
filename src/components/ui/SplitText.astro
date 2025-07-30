@@ -6,7 +6,7 @@ interface Props {
   [key: string]: any;
 }
 
-const { text, className = 'char', Tag = 'span', ...otherProps } = Astro.props;
+const { text, className = 'char', Tag = 'span', ...otherProps } = Astro.props as Props;
 
 const splitCharacters = (text: string) => {
   const characters = []
